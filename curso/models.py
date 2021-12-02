@@ -17,8 +17,8 @@ class Materia(models.Model):
         return self.nombre
 
 class Cursos(models.Model):
-    actor = models.ForeignKey(Alumno, on_delete=models.CASCADE)
-    pelicula = models.ForeignKey(Materia, on_delete=models.CASCADE)
+    alumno = models.ForeignKey(Alumno, on_delete=models.CASCADE)
+    cursos = models.ForeignKey(Materia, on_delete=models.CASCADE)
 
 class CursosInLine(admin.TabularInline):
     model = Cursos
